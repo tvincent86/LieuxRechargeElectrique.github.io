@@ -1,10 +1,8 @@
 function init(){
   var map = L.map('map').setView([46.2, 2], 5);
   
-  var CM = L.tileLayer('http://{s}.tile.cloudmade.com/{key}/{styleId}/256/{z}/{x}/{y}.png', {
-	  key: "xxxxxxxxxxxx",
-	  attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a>
-	  contributors, &copy <a href="http://cloudmade.com/">CloudMade</a>',
-	  styleId: 22677
-	}).addTo(map);
+	
+	var MapQuestOpen_OSM = L.tileLayer('http://otile{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.jpeg', {
+		attribution: 'Tiles Courtesy of <a href="http://www.mapquest.com/">MapQuest</a> &mdash; Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+		subdomains: '1234'}).addTo(map);
 }
