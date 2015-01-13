@@ -34,7 +34,9 @@
 
 <body>
 	<!--Clé API GoogleMaps/--/http://cartographie.iaat.org-->
+<!--
     <script src="https://maps.googleapis.com/maps/api/js?v=3"></script>
+-->
     
 	<!--JS jquery -->
 	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -53,7 +55,10 @@
 	<!--JS Leaflet.heat https://github.com/Leaflet/Leaflet.heat-->
 	<script src="./lib/leaflet-plugin/Heat/dist/leaflet-heat.js"></script>
 	<!--JS -->
+<!--
 	<script src="./lib/leaflet-plugin/GoogleMap/leaflet-google.js"></script>
+-->
+
 	<!--JS Proj4Leaflet https://github.com/kartena/Proj4Leaflet-->
 <!--
 	 <script src="./lib/leaflet-plugin/Proj4Leaflet/proj4-compressed.js"></script>
@@ -128,21 +133,20 @@
 	attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'});
 
 	//
-	var googleLayer_Plan = new L.Google('ROADMAP');
-	var googleLayer_Satellite = new L.Google('SATELLITE');
+	//var googleLayer_Plan = new L.Google('ROADMAP');
+	//var googleLayer_Satellite = new L.Google('SATELLITE');
 	
 
 	// On ajoute le fond de carte.
-	var caueUrl = 'http://{s}.livembtiles.makina-corpus.net/caue24/CAUE/{z}/{x}/{y}.png';
-	var caueAttrib = 'Données cartographiques fournies par le CAUE24';
-	//L.tileLayer(caueUrl, {minZoom: 8, maxZoom: 11, attribution: caueAttrib, subDomains: 'abcdefgh'}).addTo(map);
-	var caueLayer = L.tileLayer(caueUrl, {
-	attribution: caueAttrib});
+	//var caueUrl = 'http://{s}.livembtiles.makina-corpus.net/caue24/CAUE/{z}/{x}/{y}.png';
+	//var caueAttrib = 'Données cartographiques fournies par le CAUE24';
+	//var caueLayer = L.tileLayer(caueUrl, {
+	//attribution: caueAttrib});
 
 	var baseMap = {
-		"CAUE24" : caueLayer,
-		"Google Plan" : googleLayer_Plan,
-		"Google Satellite" : googleLayer_Satellite,
+		//"CAUE24" : caueLayer,
+		//"Google Plan" : googleLayer_Plan,
+		//"Google Satellite" : googleLayer_Satellite,
 		"Mapbox": mapbox,
 		"Mapnik": OpenStreetMap_Mapnik,
 		"MapQuest": MapQuestOpen_OSM,
@@ -227,7 +231,7 @@
 			maxBounds: bounds, 
 			maxZoom: 12,
 		    minZoom: 6,
-			layers: [googleLayer_Plan,markers]
+			layers: [mapbox,markers]
 		}
 	);
 	
