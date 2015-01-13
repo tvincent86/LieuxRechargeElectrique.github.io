@@ -1,7 +1,10 @@
 <html>
   <head>
     <title>Leaflet la simple[1]</title>
-    <meta http-equiv="Content-Type"content="text/html; charset=latin1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--
+    <meta http-equiv="Content-Type" content="text/html; charset=latin1">
+-->
     
 	<!--CSS Leaflet-->
 <!--
@@ -19,10 +22,47 @@
 	<link rel="stylesheet" type="text/css" href="./lib/leaflet-plugin/MarkerCluster/MarkerCluster.css" />
 	<link rel="stylesheet" type="text/css" href="./lib/leaflet-plugin/MarkerCluster/MarkerCluster.Default.css" />
 	
+	 <style>
+		body {
+		  padding: 0;
+		  margin: 0;
+					background-color :#435a6b;
+		}
+		html, body, #map {
+				height: 100%;
+				font: 10pt "Helvetica Neue", Arial, Helvetica, sans-serif;
+		}
+	</style>
+	
+<!--
 	<script src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js"></script>
+-->
+
+	<!--Clé API GoogleMaps/--/http://cartographie.iaat.org-->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3"></script>
+    
+	<!--JS jquery -->
+	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+	<!--JS Leaflet-->
+	<script src="./lib/leaflet/leaflet.js"></script>
+	<!--JS Leaflet-MiniMap : https://github.com/Norkart/Leaflet-MiniMap-->
+	<script src="./lib/leaflet-plugin/MiniMap/Control.MiniMap.js" type="text/javascript"></script>
+	<!--JS Leaflet.MousePosition : https://github.com/ardhi/Leaflet.MousePosition-->
+	<script src="./lib/leaflet-plugin/MousePosition/L.Control.MousePosition.js" type="text/javascript"></script>
+	<!--JS Leaflet.GeoSearch : https://github.com/smeijer/L.GeoSearch-->
+	<script src="./lib/leaflet-plugin/GeoSearch/js/l.control.geosearch.js"></script>
+	<script src="./lib/leaflet-plugin/GeoSearch/js/l.geosearch.provider.openstreetmap.js"></script>
+	<!--JS Leaflet.MarkerCluster : https://github.com/Leaflet/Leaflet.markercluster -->
+	<script src="./lib/leaflet-plugin/MarkerCluster/leaflet.markercluster-src.js"></script>
+	<!--JS Leaflet.heat https://github.com/Leaflet/Leaflet.heat-->
+	<script src="./lib/leaflet-plugin/Heat/dist/leaflet-heat.js"></script>
+	<!--JS -->
+	<script src="./lib/leaflet-plugin/GoogleMap/leaflet-google.js"></script>
+	
 	<script src="./js/app.js"></script>
   </head>
   <body onload="init()">
-    <div id="map" style="width : 500px; height : 500px;"></div>
+	<div id="map"></div>
   </body>
 </html>
